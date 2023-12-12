@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Sign Checker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        main {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .mainDiv {
+            text-align: center;
+        }
+
+        h1 {
+            color: black;
+            font-size: 50px;
+            font-weight: bolder;
+            margin: 20px 20px;
+        }
+
+        label {
+            font-size: 25px;
+            margin: 0px 15px;
+        }
+
+        input {
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+            border-bottom: 4px solid black;
+            font-size: 25px;
+            margin: 15px;
+        }
+
+        button {
+            font-size: 25px;
+            color: white;
+            background: rgba(49, 49, 148, 0.650);
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 270px;
+            height: 50px;
+            margin: 30px;
+        }
+
+        button:hover {
+            background: rgba(49, 49, 148, 0.750);
+        }
+
+        p {
+            font-size: 25px;
+            margin: 20px 10px;
+        }
+
+        .pictureDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 90vw;
+            height: auto;
+        }
+
+        .htmlPictureDiv {
+            margin: 20px;
+            height: 50%;
+        }
+
+        .jsPictureDiv {
+            margin: 20px;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <!-- Find The Largest Among Three Number by Method-1 -->
+        <div class="mainDiv">
+            <h1>Find The Largest Among Three Number by Method-1</h1>
+
+
+            <div class="input1">
+                <label for="variable1">Enter a number 1 :</label>
+                <input type="number" name="var1" id="variable1" placeholder="Enter Number">
+            </div>
+
+            <div class="input3">
+                <label for="variable1">Enter a number 2 :</label>
+                <input type="number" name="var2" id="variable2" placeholder="Enter Number">
+            </div>
+
+            <div class="input3">
+                <label for="variable1">Enter a number 3 :</label>
+                <input type="number" name="var3" id="variable3" placeholder="Enter Number">
+            </div>
+
+
+            <Button onclick="function1()">Check Number</Button>
+
+
+            <div id="beforeText">
+                <p id="p1"></p>
+            </div>
+
+        </div>
+        <div class="pictureDiv">
+            <div class="htmlPictureDiv">
+                <img src="./html1.png" alt="P1">
+            </div>
+            <div class="jsPictureDiv">
+                <img src="./js1.png" alt="P1">
+
+            </div>
+        </div>
+
+        <!-- Find The Largest Among Three Number by Method-2 -->
+        <div class="mainDiv">
+            <h1>Find The Largest Among Three Number by Method-2</h1>
+
+
+            <div class="input1">
+                <label for="variable4">Enter a number 1 :</label>
+                <input type="number" name="var4" id="variable4" placeholder="Enter Number">
+            </div>
+
+            <div class="input3">
+                <label for="variable5">Enter a number 2 :</label>
+                <input type="number" name="var5" id="variable5" placeholder="Enter Number">
+            </div>
+
+            <div class="input6">
+                <label for="variable1">Enter a number 3 :</label>
+                <input type="number" name="var6" id="variable6" placeholder="Enter Number">
+            </div>
+
+
+            <Button onclick="function2()">Check Number</Button>
+
+
+            <div id="beforeText">
+                <p id="p2"></p>
+            </div>
+
+        </div>
+        <div class="pictureDiv">
+            <div class="htmlPictureDiv">
+                <img src="./html2.png" alt="P1">
+            </div>
+            <div class="jsPictureDiv">
+                <img src="./js2.png" alt="P1">
+
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <!-- JavaScript for Method-1  -->
+    <script>
+        "use strict";
+        function function1() {
+
+            // Get value
+            let a = parseFloat(document.getElementById("variable1").value);
+            let b = parseFloat(document.getElementById("variable2").value);
+            let c = parseFloat(document.getElementById("variable3").value);
+            let largest1 = a;
+
+            // Check condition 
+            if (b > largest1) {
+
+                largest1 = b;
+
+            }
+            if (c > largest1) {
+
+                largest1 = c;
+
+            }
+
+            document.getElementById("p1").innerHTML = `Largest Number is : ${largest1}`;
+
+        }
+    </script>
+
+    <!-- JavaScript for Method-2  -->
+    <script>
+        "use strict";
+        function function2() {
+
+            // Get value
+            let d = parseFloat(document.getElementById("variable4").value);
+            let e = parseFloat(document.getElementById("variable5").value);
+            let f = parseFloat(document.getElementById("variable6").value);
+            let largest2 = d;
+
+            // Check condition 
+
+            if ((d - f) > 0 && (d - e) > 0) {
+                largest2 = d;
+            }
+            if ((e - d) > 0 && (e - f) > 0) {
+                largest2 = e;
+            }
+            if ((f - d) > 0 && (f - e) > 0) {
+                largest2 = f;
+            }
+
+            document.getElementById("p2").innerHTML = `Largest Number is : ${largest2}`;
+
+        }
+    </script>
+
+</body>
+
+</html>
